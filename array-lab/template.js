@@ -41,6 +41,8 @@ $(function(){
 
 	console.log('These are your animals:' + animals)
 
+	
+
 	var remove = prompt('Do you want to delete something (y)es or (n)o');
 
 	if(remove != 'n')
@@ -53,7 +55,6 @@ $(function(){
 				var anim = prompt('These are your animals: ' + animals + '. Which one?');
 				var fullAnimal = animals.indexOf(anim);
 				animals.splice(fullAnimal, 1);
-				anim = alert('These are your animals: ' + animals);
 			}
 
 			if(options == 'c')
@@ -61,7 +62,6 @@ $(function(){
 				var col = prompt('These are your colors: ' + colors + '. Which one?');
 				var fullColor = colors.indexOf(col);
 				colors.splice(fullColor, 1);
-				col = alert('These are your animals: ' + colors);
 			}
 
 			if(options == 'p')
@@ -69,7 +69,6 @@ $(function(){
 				var ppl = prompt('These are your people: ' + people + '. Which one?');
 				var fullPpl = people.indexOf(ppl);
 				people.splice(fullppl, 1);
-				ppl = alert('These are your animals: ' + animals);
 			}
 
 			options = prompt('Would you like to delete an (a)nimal, (c)olor, or (p)erson or (q)uit?');

@@ -19,7 +19,7 @@ $(function(){
 	var amount = $('#amount-checking').val();
 	amount = parseInt(amount);	
 
-	balance_checking = balance_checking+amount;
+	balance_checking = balance_checking + amount;
 	balance_checking = parseInt(balance_checking);
 
 	$('#cash-checking').text(balance_checking);
@@ -35,18 +35,17 @@ $(function(){
 
 	if(amount<=balance_checking)
 	{
-		balance_checking = balance_checking-amount;
-
-	}	
-	else if(amount<=(balance_checking+balance_savings))
+		balance_checking = balance_checking - amount;
+	}
+	else if(amount<=(balance_checking + balance_savings))
 	{
-		balance_savings = balance_savings-(amount-balance_checking);
-		balance_checking = 0;
+		balance_savings = balance_savings - (amount - balance_checking);
+		balance_checking = 0; //takes the checking balance to zero
 	}	
 
 
-	$('#cash-checking').text(balance_checking);
-	$('#cash-savings').text(balance_savings);
+	$('#cash-checking').text(balance_checking); //updates the checking balance on the screen
+	$('#cash-savings').text(balance_savings); //updates the savings balance on the screen
 
 	}
 
@@ -55,7 +54,7 @@ $(function(){
 	var amount = $('#amount-savings').val();
 	amount = parseInt(amount);	
 
-	balance_savings= balance_savings+amount;
+	balance_savings= balance_savings + amount;
 	balance_savings= parseInt(balance_savings);
 
 	$('#cash-savings').text(balance_savings);
@@ -72,11 +71,21 @@ $(function(){
 
 	if(amount <= balance_savings)
 	{
-	balance_savings = balance_savings-amount;
+	balance_savings = balance_savings - amount;
+	$('#cash-savings').text(balance_savings);
 	}
 
-	$('#cash-savings').text(balance_savings);
+	
 
 	}
 
 });
+
+
+
+
+
+
+// THIS IS THE LOGIC
+
+

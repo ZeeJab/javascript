@@ -1,37 +1,43 @@
-<!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Bank of GA</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="template.css">
+		<link rel="stylesheet" href="template.css">
 		<script src="jquery-1.8.2.js"></script>
 		<script src="template.js"></script>
 	</head>
 	<body>
-	<div id="container">
-
-		<header>
-			<h1>BANK OF GA</h1>
-		</header>
-
-		<div id="main">
-			
-			<div class="Box" id="bal">
-				<h2>Balance</h2>
-				<div id="cash">
-					1000
-				</div> <!-- #cash -->
-			</div> <!-- .box #bal -->
-
-			<div class="Box" id="dep-and-with">
-				<input type="text" id="amount" />
-				<input type="button" value="Deposit" id="deposit" />
-				<input type="button" value="Withdraw" id="withdraw" />
-			</div> <!-- .box #dep-and-with -->
-
-		</div> <!-- #main -->
-	</div> <!-- #container -->
-
+		<div id="container">
+			<header>
+				<h1><a href="#">Bank of GA</a></h1>
+			</header>	
+			<div id="checking">
+				<div class="box">
+					<h2>Checking</h2>
+					<div class="cashwrapper" id="cashwrapper-checking">
+						$<span id="cash-checking">1000</span>.00
+					</div>
+				</div>
+				<div class="box">
+					<input type="text" id="amount-checking" placeholder="Enter an amount">
+					<input type="button" value="Deposit" id="deposit-checking">
+					<input type="button" value="Withdraw" id="withdraw-checking">
+				</div>
+			</div>
+			<div id="savings">
+				<div class="box">
+					<h2>Savings</h2>
+					<div class="cashwrapper" id="cashwrapper-savings">
+						$<span id="cash-savings">1000</span>.00
+					</div>
+				</div>
+				<div class="box">
+					<input type="text" id="amount-savings" placeholder="Enter an amount">
+					<input type="button" value="Deposit" id="deposit-savings">
+					<input type="button" value="Withdraw" id="withdraw-savings">
+				</div>
+			</div>
+			<footer>
+			</footer>
 	</body>
 </html>

@@ -1,46 +1,82 @@
 $(function(){
 
-	var balance = $('#cash').text();
-	balance = parseInt(balance);
+	var balance_checking = $('#cash-checking').text();
+	balance_checking = parseInt(balance_checking);
 
-	$('#deposit').click(deposit);
-	$('#withdraw').click(withdraw);
+	var balance_savings = $('#cash-savings').text();
+	balance_savings = parseInt(balance_savings);
 
-	function deposit()
-{
-	var amount = $('#amount').val();
-	amount = parseInt(amount); 
+	$('#deposit-checking').click(dep);
+	$('#withdraw-checking').click(wd);
 
-	balance = balance + amount;
-	balance = parseInt(balance);
+	$('#deposit-savings').click(depsavings);
+	$('#withdraw-savings').click(wdsavings);
 
-	$('#cash').text(balance);
 
-	if(balance < 0)
-		$('#cash').css('background-color', 'red');  
-	else
-		$('#cash').css('background-color', 'green'); 
+	function dep()
+	{
 
-} 
+	var amount = $('#amount-checking').val();
+	amount = parseInt(amount);	
 
-function withdraw()
-{
-	var amount = $('#amount').val();
-	amount = parseInt(amount); 
+	balance_checking = balance_checking+amount;
+	balance_checking = parseInt(balance_checking);
 
-	balance = balance - amount;
-	balance = parseInt(balance);
+	$('#cash-checking').text(balance_checking);
+	}
 
-	$('#cash').text(balance);
+	function wd()
+	{
+	amount = $('#amount-checking').val();
+	amount = parseInt(amount);	
 
-	if(balance < 0)
-		$('#cash').css('background-color', 'red');  
-	else
-		$('#cash').css('background-color', 'green'); 	
-} 
+	balance_savings = $('#cash-savings').text();
+	balance_savings = parseInt(balance_savings);
+
+	if(amount<=balance_checking)
+	{
+		balance_checking = balance_checking-amount;
+
+	}	
+	else if(amount<=(balance_checking+balance_savings))
+	{
+		balance_savings = balance_savings-(amount-balance_checking);
+		balance_checking = 0;
+	}	
+
+
+	$('#cash-checking').text(balance_checking);
+	$('#cash-savings').text(balance_savings);
+
+	}
+
+	function depsavings()
+	{
+	var amount = $('#amount-savings').val();
+	amount = parseInt(amount);	
+
+	balance_savings= balance_savings+amount;
+	balance_savings= parseInt(balance_savings);
+
+	$('#cash-savings').text(balance_savings);
+
+	}
+
+	function wdsavings()
+	{
+	amount = $('#amount-savings').val();
+	amount = parseInt(amount);	
+
+	balance_savings = $('#cash-savings').text();
+	balance_savings = parseInt(balance_savings);
+
+	if(amount <= balance_savings)
+	{
+	balance_savings = balance_savings-amount;
+	}
+
+	$('#cash-savings').text(balance_savings);
+
+	}
 
 });
-
-
-
-

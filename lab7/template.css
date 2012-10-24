@@ -1,0 +1,19 @@
+.a, .box {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border: 1px dotted #252525;
+	margin: 20px;
+}
+
+.alert {
+	background: red;
+}
+
+.green {
+	background: green;
+}
+
+.blue {
+	background: blue;
+}

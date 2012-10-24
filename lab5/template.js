@@ -14,7 +14,6 @@ function math()
 	var add=$(this).text();
 	add = parseInt(add);	
 	amount = amount + add;
-	console.log(amount);
 	$('#amount').text(amount);
 }
 

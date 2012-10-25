@@ -1,14 +1,18 @@
 var alpha_array = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 var number_of_cards = 0;
 var final_array = [];
+var selected1 = null;
+var selected2 = null;
 
 
+	
 
 $(function(){
 
 	$('input').click(create_board);
-	$('#boxes').on('click', '.box', select_box);
-	$('#boxes').on('click', '.select', unselect);
+	$('#board').on('click', '.box', select_box1);
+	// $('#board').on('click', '.box', select_box2);
+	// $('#board').on('click', '.select', unselect);
 
 
 });
@@ -55,22 +59,93 @@ function create_board()
 			}
 }
 
-function select_box()
+function select_box1()
 {
-	if(selected != null)
-		{
-		selected.removeClass('select');
-		selected = $(this).addClass('select');
-		}
-	else
-		selected = $(this).addClass('select');
-}
+	var a;
+	var b;
 
-function unselect()
-{
-	selected.removeClass('select');
-	selected = null;	
-}
+	if (selected1 == null)
+	{
+		selected1 = $(this);
+		$(this).addClass('select');
+		a = selected1.attr('id');
+	}
+
+	if (selected1 != null)
+	{
+		selected2 = $(this);
+		// $(this).addClass('select');
+		b = selected2.attr('id');
+
+		if(final_array[a] == final_array[b])
+		{
+			selected1.addClass('match');
+			selected2.addClass('match');
+			selected1.removeClass('select');
+		}
+	}
+
+		// else
+		// {
+		// 	$(this).addClass('select');
+		// 	selected1.removeClass('select');
+		// }
+}	
+
+// 	if (selected2 != null)
+// 	{
+		
+
+// 		else
+// 		{
+// 			$(this).addClass('select');
+// 			a = selected1.attr('id');
+// 		}
+// 	}
+// }
+
+	// selected1 = $(this);
+	// var a = selected1.attr('id');
+	// // var b = selected2.attr('id');
+	
+	// if(selected2 != null)
+	// {
+		
+	// 	else
+	// 	(select1 != null)
+	// 	{
+	// 	selected2 = $(this);
+	// 	$(this)var b = selected2.attr('id');
+		
+	// 	}
+	// }
+// if nothing is selected then you add a class if something is selected
+// you have compare their id's, if its a match then add .match to both
+// if it doesn;t match remove the first class and add class to second one selected
+
+	// selected1 = $(this).addClass('select');
+	
+	// else 
+	// selected1 = $(this).addClass('select');
+
+
+
+	
+	
+	// if(select1 != null)
+	// {
+	// selected2 = $(this);
+	// $(this)var b = selected2.attr('id');
+	
+	// }
+
+	
+
+// function unselect()
+// {
+// 	selected.removeClass('select');
+// 	selected = null;	
+// }
 
 //Randomize the Cards
 function randomizeArray(array){

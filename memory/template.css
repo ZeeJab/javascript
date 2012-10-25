@@ -6,3 +6,12 @@
 	float: left;
 	background-color: gray;
 }
+
+.select {
+	border: 2px solid red;
+	background: blue;
+}
+
+.match {
+	background: green;
+}

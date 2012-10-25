@@ -18,7 +18,8 @@ function add_colors()
 	var colors = $('#input').val();
 	var colors_array = colors.split(", ");
 
-	var loop = colors_array.length; // you can also rewrite this is the for loop like this for(var i = 0; i < colors.length; i++)
+	var loop = colors_array.length; // you can also rewrite this is the for loop 
+	//like this for(var i = 0; i < colors.length; i++)
 
 	for(i=0; i < loop; i++) 
 	{
@@ -34,7 +35,9 @@ function add_colors()
 
 function input_color()
 {
-	var input = $(this).css('background-color');
+	var input = $(this).css('background-color'); //it see what the background 
+	//color of what you just hovered over is. 
+	// wihtout the comma it tells you but with the comma you set the background color
 	$('#input').css('background-color', input);
 }
 
@@ -42,7 +45,7 @@ function select_box()
 {
 	if(selected != null)
 		{
-		// selected.removeClass('select');
+		selected.removeClass('select');
 		selected = $(this).addClass('select');
 		}
 	else
@@ -86,7 +89,8 @@ function backward()
 // ["blue", "green", "orange"]
 // array.length tells you how many times you loop through it
 
-// 2. dynamically make a hover over this and grab the background color $(this).css('background-color') and change the background color of the text box to that color
+// 2. dynamically make a hover over this and grab the background color 
+//$(this).css('background-color') and change the background color of the text box to that color
 
 // 3.move the elements back and forth with the arrows
 // s.prev().append;
@@ -106,9 +110,11 @@ function backward()
 // this.css('backgroundcolor') and the background color of the textbox same as that
 
 
-// 5. select -- when you click once it puts a border around it and you can click again and it unselects it and (so at most there's either one or none things selected)
+// 5. select -- when you click once it puts a border around it and you can click again 
+//and it unselects it and (so at most there's either one or none things selected)
 
-// 6. you can only move a color that's selected, so once something is selected you can use the arrows to move it back and forth... 
+// 6. you can only move a color that's selected, so once something is selected you can use 
+//the arrows to move it back and forth... 
 
 
 // 7. double click and it removes this. its called a remove 

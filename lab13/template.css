@@ -1,0 +1,70 @@
+.photo {
+	/*float: left;*/
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	display: inline;
+}
+
+.bitch {
+	width: 130px;
+	border: 1px solid white;
+	border-radius: 5px;
+	display: inline;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
+
+div .img {
+	/*float: left;*/
+}
+
+header img {
+/*	margin-top: 20px;
+	color: white;
+	font-size: 1.4em;
+	margin-left: 20px;*/
+
+	width: 300px;
+	height: 100px;
+}
+
+header {
+	color: white;
+}
+
+input {
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+body {
+	background: url('images/bg_blurb.jpg');
+}
+
+#container {
+	width: 600px;
+	margin-left: 20px;
+	float: left;
+	border: 2px solid white;
+	border-radius: 5px;
+}
+
+#containertwo {
+	width: 700px;
+	float: right;
+	border: 2px solid white;
+	border-radius: 5px;
+}
+
+#wall {
+	width: 700px;
+	float: right;
+	display: block;
+
+}
+

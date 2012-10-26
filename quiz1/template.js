@@ -1,0 +1,6 @@
+$(function(){
+
+	$('#add').click(addition);
+
+});
+

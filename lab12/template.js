@@ -7,7 +7,7 @@ $(function(){
 	$('#b1').click(save_data);
 	$('#b2').click(get_data);	
 
-});
+});S
 
 function save_data()
 {

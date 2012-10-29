@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>JaveScript Template</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="template.css">
+		<script src="jquery-1.8.2.js"></script>
+		<script src="template.js"></script>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Checker</title>
+  <style>
+    .black {background: #000;}
+    td {width: 50px; height: 50px; background: #FFF;}
+    td img{width: 40px; height: 40px;}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>
+  $(function(){
+    // function drawBoard(){
+    //   //
+    //   $("div#board");
+    // };
+    function findPossibleMovesFor($piece){
+      row_position = parseInt($piece.parents("tr").attr("class").replace("row", ""));
+      piece_color = $piece.attr("src") == 'black.gif' ? 'black' : 'red'
+      column_position = parseInt($piece.parent().attr("class").replace("black ", ""));
+      next_row = piece_color == 'black' ? row_position-1 : row_position+1
+
+      // possible_column_positions
+
+
+      console.log(row_position, piece_color, next_row, column_position)
+    };
+
+    $("td img").click(function(){
+      $("#log").html("piece clicked, select a place to move");
+      findPossibleMovesFor($(this));
+
+    });
+    // drawBoard();
+  });
+  </script>
+</head>
+
+<body>
+  <div id="log"></div>
+  <div id="board">
+    <table>
+      <tr class="row1">
+        <td class="black 0"><img src="red.jpg"></td>
+        <td></td>
+        <td class="black 1"><img src="red.jpg"></td>
+        <td></td>
+        <td class="black 2"><img src="red.jpg"></td>
+        <td></td>
+        <td class="black 3"><img src="red.jpg"></td>
+        <td></td>
+      </tr>
+      <tr class="row2">
+        <td></td>
+        <td class="black 0"><img src="red.jpg"></td>
+        <td></td>
+        <td class="black 1"><img src="red.jpg"></td>
+        <td></td>
+        <td class="black 2"><img src="red.jpg"></td>
+        <td></td>
+        <td class="black 3"><img src="red.jpg"></td>
+      </tr>
+      <tr class="row3">
+        <td class="black 0"></td>
+        <td></td>
+        <td class="black 1"></td>
+        <td></td>
+        <td class="black 2"></td>
+        <td></td>
+        <td class="black 3"></td>
+        <td></td>
+      </tr>
+      <tr class="row4">
+        <td></td>
+        <td class="black 0"></td>
+        <td></td>
+        <td class="black 1"></td>
+        <td></td>
+        <td class="black 2"></td>
+        <td></td>
+        <td class="black 3"></td>
+      </tr>
+      <tr class="row5">
+        <td class="black 0"></td>
+        <td></td>
+        <td class="black 1"></td>
+        <td></td>
+        <td class="black 2"></td>
+        <td></td>
+        <td class="black 3"></td>
+        <td></td>
+      </tr>
+      <tr class="row6">
+        <td></td>
+        <td class="black 0"></td>
+        <td></td>
+        <td class="black 1"></td>
+        <td></td>
+        <td class="black 2"></td>
+        <td></td>
+        <td class="black 3"></td>
+      </tr>
+      <tr class="row7">
+        <td class="black 0"><img src="black.gif"></td>
+        <td></td>
+        <td class="black 1"><img src="black.gif"></td>
+        <td></td>
+        <td class="black 2"><img src="black.gif"></td>
+        <td></td>
+        <td class="black 3"><img src="black.gif"></td>
+        <td></td>
+      </tr>
+      <tr class="row8">
+        <td></td>
+        <td class="black 0"><img src="black.gif"></td>
+        <td></td>
+        <td class="black 1"><img src="black.gif"></td>
+        <td></td>
+        <td class="black 2"><img src="black.gif"></td>
+        <td></td>
+        <td class="black 3"><img src="black.gif"></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

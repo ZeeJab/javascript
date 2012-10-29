@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>JaveScript Template</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="template.css">
+		<script src="jquery-1.8.2.js"></script>
+		<script src="template.js"></script>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Checker</title>
+  <style>
+    td {width: 175px; height: 175px; background: #FFF;}
+    td.chosen {background:;}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>
+  function checkWin(){
+    won = false;
+
+    a0 = $("tr:nth(0) td")[0]
+    a1 = $("tr:nth(0) td")[1]
+    a2 = $("tr:nth(0) td")[2]
+
+    b0 = $("tr:nth(1) td")[0]
+    b1 = $("tr:nth(1) td")[1]
+    b2 = $("tr:nth(1) td")[2]
+
+    c0 = $("tr:nth(2) td")[0]
+    c1 = $("tr:nth(2) td")[1]
+    c2 = $("tr:nth(2) td")[2]
+
+    if (a0 == "X" && a1 == "X" && a2 == "X"){
+      won = true;
+    }
+
+  }
+  $(function(){
+    turn = "X"
+
+    $("td").click(function(){
+      if ($(this).hasClass("chosen")){
+        console.log("already chosen")
+      } else {
+        $(this).addClass("chosen");
+        $(this).html(turn)
+        turn = (turn == "X") ? "O" : "X";
+        checkWin();
+      }
+
+    });
+
+  });
+  </script>
+</head>
+
+<body>
+  <div id="log"></div>
+  <table>
+    <tr>
+      <td style="border-bottom: 1px solid #000;"></td>
+      <td style="border-left: 1px solid #000; border-right: 1px solid #000;"></td>
+      <td style="border-bottom: 1px solid #000;"></td>
+    </tr>
+    <tr>
+      <td style="border-bottom: 1px solid #000;"></td>
+      <td style="border: 1px solid #000;"></td>
+      <td style="border-bottom: 1px solid #000;"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="border-left: 1px solid #000; border-right: 1px solid #000;"></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>

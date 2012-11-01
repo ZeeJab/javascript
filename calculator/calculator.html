@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>JS Claculator</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="calculator.css">
+		<script src="jquery-1.8.2.js"></script>
+		<script src="calculator.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Cinzel:400,900' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<div id="container">
+				<header><h1>JS Calculator</h1></header>
+
+			<div id="calc_main">
+			    	<input type="hidden" id="operation" value=""/>
+			    	<input type="text" id="answer" value="" disabled="disabled" placeholder="0" />
+			    	<div class="clear"></div>
+
+			     	<div id="buttons">
+				     	<input class="operation" type="button" value="+" id="plus" />
+				        <input class="operation" type="button" value="-" id="subtract" />
+				        <input class="operation" type="button" value="/" id="divide" />
+				        <input class="operation" type="button" value="*" id="product" />
+				        <div class="clear"></div>
+
+				        <input type="button" value="1" id="1" />
+				        <input type="button" value="2" id="2" />
+				        <input type="button" value="3" id="3" />
+				        <input type="button" value="4" id="4" />
+				        <div class="clear"></div>
+
+				        <input type="button" value="5" id="5" />
+				        <input type="button" value="6" id="6" />
+				        <input type="button" value="7" id="7" />
+				        <input type="button" value="8" id="8" />
+				        <div class="clear"></div>
+
+				        <input type="button" value="9" id="9" />
+				        <input type="button" value="0" id="0" />
+				        <input class="operation" type="button" value="C" id="C" />
+				        <input class="operation" type="button" value="=" id="equals" />
+				   		<div class="clear"></div>
+			   	</div> <!-- #buttons -->
+			</div> <!-- #calc_main -->
+			</div> <!-- #container -->
+	</div> <!-- #wrapper -->
+	</body>
+</html>

@@ -1,0 +1,9 @@
+td {
+	width: 175px; 
+	height: 175px; 
+	background: #FFF;
+}
+    
+td.chosen {
+	background:;
+}
